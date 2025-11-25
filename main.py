@@ -14,7 +14,7 @@ def fibonacci(n):
 def factorial(n):
     """Retorna el factorial de n."""
     if n < 0:
-        return None  # el factorial no existe para negativos
+        return None 
     resultado = 1
     for i in range(2, n + 1):
         resultado *= i
@@ -62,13 +62,11 @@ def primeros_n_perfectos(n):
     return perfectos
 
 
-# ============================
-#   M  E  N  Ú   P R I N C I P A L
-# ============================
+#   MENÚ
 
 def menu():
     while True:
-        print("\n===== MENÚ PRINCIPAL =====")
+        print("\n===== MENÚ  =====")
         print("1. Cálculo de Fibonacci")
         print("2. Cálculo del factorial")
         print("3. Determinar si un número es primo")
@@ -108,6 +106,7 @@ def menu():
             print("Opción inválida. Intente nuevamente.")
 
 
-# Punto de entrada
+
 if __name__ == "__main__":
     menu()
+#### 
