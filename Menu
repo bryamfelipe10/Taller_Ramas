@@ -1,0 +1,46 @@
+def menu():
+    while True:
+        print("\n===== MENÚ  =====")
+        print("1. Cálculo de Fibonacci")
+        print("2. Cálculo del factorial")
+        print("3. Determinar si un número es primo")
+        print("4. Generar los primeros N números perfectos")
+        print("5. Salir")
+
+        opcion = input("\nSeleccione una opción: ")
+
+        if opcion == "1":
+            n = int(input("Ingrese el valor de n para Fibonacci: "))
+            print(f"Fibonacci({n}) = {fibonacci(n)}")
+
+        elif opcion == "2":
+            n = int(input("Ingrese un número para obtener su factorial: "))
+            resultado = factorial(n)
+            if resultado is None:
+                print("El factorial no existe para números negativos.")
+            else:
+                print(f"{n}! = {resultado}")
+
+        elif opcion == "3":
+            n = int(input("Ingrese un número para verificar si es primo: "))
+            if es_primo(n):
+                print(f"{n} ES un número primo.")
+            else:
+                print(f"{n} NO es un número primo.")
+
+        elif opcion == "4":
+            n = int(input("¿Cuántos números perfectos desea generar?: "))
+            print("Números perfectos:", primeros_n_perfectos(n))
+
+        elif opcion == "5":
+            print("Saliendo del programa...")
+            break
+
+        else:
+            print("Opción inválida. Intente nuevamente.")
+
+
+
+if __name__ == "__main__":
+    menu()
+#### 
